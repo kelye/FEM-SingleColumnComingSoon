@@ -1,16 +1,17 @@
-function ValidateEmail(emailtest){
-    var emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    // var test = emailtest
-    // console.log(test);
-    
+let errorMsg = document.getElementById("error-msg");
+let emaildId = document.getElementById("email-id");
+let emailRegex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(emailtest.value.match(emailRegex)){
-        alert("shit matches yo");
-        // document.emailform.emailname.focus()
+function checker(){
+    if(emaildId.value.match(emailRegex)){
+        console.log("shit matches yo");
+        return true;
     }
     else{
-        // document.emailform.emailname.focus()
-        alert("bricked");
+        console.log("bricked");
+        errorMsg.style.display="inline-block";
+        emaildId.style.border= '1px solid hsl(354, 100%, 66%)';
+        return false;
     }
     
 }

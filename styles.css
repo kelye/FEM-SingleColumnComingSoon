@@ -47,14 +47,26 @@ html {
   align-items: center;
   flex-direction: column;
   width: 80%;
+  text-align: center;
+
+  #error-msg {
+    display: none;
+    color: hsl(354, 100%, 66%);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 25px;
+    min-width: 100%;
+  }
 }
 .email-field {
   padding: 15px;
-  width: 100%;
+  min-width: 100%;
+  display: inline-block;
   border-color: hsl(223, 100%, 88%);
   border-style: solid;
   border-radius: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border-width: 2px;
 }
 
@@ -64,7 +76,8 @@ html {
 
 .submit-btn {
   padding: 15px;
-  width: 100%;
+  min-width: 100%;
+  display: inline-block;
   margin-bottom: 50px;
   border-style: none;
   border-radius: 30px;
@@ -87,8 +100,40 @@ html {
   align-items: center;
 }
 
-/* ### Primary
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
 
+.social-container svg {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.icon-container {
+  margin-left: 10px;
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border: 1px solid hsl(0, 0%, 59%, 0.4);
+  border-radius: 50%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.social-container .icon-container:hover {
+  background-color: hsl(223, 87%, 63%);
+  border-style: none;
+  cursor: pointer;
+}
+
+/* ### PrimaryIN
+	79, 125, 243
 - Blue: hsl(223, 87%, 63%)
 
 ### Secondary
