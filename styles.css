@@ -78,7 +78,8 @@ html {
   padding: 15px;
   min-width: 100%;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 40px;
   border-style: none;
   border-radius: 30px;
   background-color: hsl(223, 87%, 63%);
@@ -100,11 +101,15 @@ html {
   align-items: center;
 }
 
+.image-container img {
+  width: 70%;
+}
+
 .social-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .social-container svg {
@@ -126,22 +131,87 @@ html {
   justify-content: center;
 }
 
+.social-container .icon-container:hover svg,
 .social-container .icon-container:hover {
+  fill: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   background-color: hsl(223, 87%, 63%);
   border-style: none;
   cursor: pointer;
 }
 
-/* ### PrimaryIN
-	79, 125, 243
-- Blue: hsl(223, 87%, 63%)
+.copyright-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-### Secondary
+.copyright-container p {
+  text-align: center;
+  font-size: 12px;
+  opacity: 70%;
+}
 
-- Pale Blue: hsl(223, 100%, 88%)
-- Light Red: hsl(354, 100%, 66%)
+@media only screen and (min-width: 1100px) {
+  .logo-container {
+    margin-top: 80px;
+    margin-bottom: 45px;
+  }
+  .input-container {
+    width: 50%;
+    text-align: center;
 
-### Neutral
+    #error-msg {
+      display: none;
+      color: hsl(354, 100%, 66%);
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 0;
+      min-width: 0;
+      text-align: left;
+      margin-left: 50px;
+      margin-top: 5px;
+    }
+  }
 
-- Gray: hsl(0, 0%, 59%)
-- Very Dark Blue: hsl(209, 33%, 12%) */
+  .email-error-container {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 40%;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .email-field {
+    min-width: 50%;
+    margin-bottom: 0;
+    float: left;
+    margin-left: 10px;
+  }
+
+  input.submit-btn {
+    min-width: 20%;
+    float: right;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 48px;
+    margin-left: 20px;
+  }
+
+  .image-container img {
+    width: 50%;
+  }
+
+  .copyright-container {
+    margin-bottom: 20px;
+  }
+}
